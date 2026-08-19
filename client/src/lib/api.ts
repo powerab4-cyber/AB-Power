@@ -105,7 +105,9 @@ export type FoodSuggestion = {
   fit?: number
 }
 
-const API_BASE = import.meta.env.VITE_API_URL || ''
+const API_BASE =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? 'https://ab-power.onrender.com' : '')
 
 const TOKEN_KEY = 'abpower_token'
 
