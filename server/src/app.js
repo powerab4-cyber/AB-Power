@@ -22,7 +22,19 @@ const app = express()
 const trustProxyRaw = process.env.TRUST_PROXY
 app.set('trust proxy', trustProxyRaw !== undefined ? Number(trustProxyRaw) : 1)
 
-app.use(helmet())
+app.use(
+  helmet({
+    permissionsPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        imgSrc: ["'self'", 'data:', 'https://ik.imagekit.io'],
+        scriptSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        connectSrc: ["'self'", 'https://ab-power.onrender.com', 'https://ik.imagekit.io'],
+      },
+    },
+  })
+)
 app.use(compression())
 
 const allowedOrigins = [
