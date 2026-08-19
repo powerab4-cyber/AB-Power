@@ -47,41 +47,44 @@ export function Footer() {
           )}
         </nav>
         {/* Social links */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://www.instagram.com/ab.powerdz?igsh=MWo1eGp4d3d3Y3d1Ng=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-mist transition-colors hover:text-white"
+            className="group flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] px-4 py-2.5 text-mist backdrop-blur-sm transition-all duration-300 hover:border-pink-500/30 hover:bg-pink-500/10 hover:text-pink-400 hover:shadow-lg hover:shadow-pink-500/10"
             aria-label="Instagram"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 transition-transform duration-300 group-hover:scale-110">
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
               <circle cx="12" cy="12" r="5" />
               <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
             </svg>
+            <span className="text-sm font-medium">Instagram</span>
           </a>
           <a
             href="https://lite.tiktok.com/t/ZS9kbvK6vp8wG-kpCN6/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-mist transition-colors hover:text-white"
+            className="group flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] px-4 py-2.5 text-mist backdrop-blur-sm transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/10"
             aria-label="TikTok"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 transition-transform duration-300 group-hover:scale-110">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.38-6.22V9.4a8.16 8.16 0 0 0 4.84 1.58V7.53a4.85 4.85 0 0 1-1-.84z" />
             </svg>
+            <span className="text-sm font-medium">TikTok</span>
           </a>
           <a
             href="https://www.facebook.com/share/19M8MgDdPG/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-mist transition-colors hover:text-white"
+            className="group flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] px-4 py-2.5 text-mist backdrop-blur-sm transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10 hover:text-blue-400 hover:shadow-lg hover:shadow-blue-500/10"
             aria-label="Facebook"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 transition-transform duration-300 group-hover:scale-110">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
+            <span className="text-sm font-medium">Facebook</span>
           </a>
         </div>
         <div className="flex max-w-md flex-col items-center gap-2 px-2 text-center">
