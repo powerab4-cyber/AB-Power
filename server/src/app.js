@@ -33,8 +33,6 @@ if (clientOrigin) {
       credentials: true,
     })
   )
-} else if (process.env.NODE_ENV === 'production') {
-  console.warn('WARNING: CLIENT_ORIGIN is not set — CORS requests from browsers will be blocked')
 } else {
   app.use(cors())
 }

@@ -105,6 +105,8 @@ export type FoodSuggestion = {
   fit?: number
 }
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
+
 const TOKEN_KEY = 'abpower_token'
 
 const GET_CACHE_TTL_MS = 60_000
@@ -181,7 +183,7 @@ async function request<T>(
 
   let res: Response
   try {
-    res = await fetch(`/api${path}`, {
+    res = await fetch(`${API_BASE}/api${path}`, {
       method,
       headers,
       cache: 'no-store',
@@ -313,7 +315,7 @@ export async function uploadImage(token: string, file: File): Promise<{ success:
 
   let res: Response
   try {
-    res = await fetch('/api/upload', { method: 'POST', headers, body: formData })
+    res = await fetch(`${API_BASE}/api/upload`, { method: 'POST', headers, body: formData })
   } catch {
     throw new Error('تعذّر رفع الصورة، حاول مجدداً')
   }
