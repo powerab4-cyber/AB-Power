@@ -25,17 +25,24 @@ app.set('trust proxy', trustProxyRaw !== undefined ? Number(trustProxyRaw) : 1)
 app.use(helmet())
 app.use(compression())
 
-const clientOrigin = process.env.CLIENT_ORIGIN || ''
-if (clientOrigin) {
-  app.use(
-    cors({
-      origin: clientOrigin.split(',').map((o) => o.trim()),
-      credentials: true,
-    })
-  )
-} else {
-  app.use(cors())
-}
+const allowedOrigins = [
+  'https://ab-power-jade.vercel.app',
+  'https://ab-power-jade-git-main-ab-power-jade.vercel.app',
+  ...(process.env.CLIENT_ORIGIN ? process.env.CLIENT_ORIGIN.split(',').map((o) => o.trim()) : []),
+]
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    },
+    credentials: true,
+  })
+)
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
 
