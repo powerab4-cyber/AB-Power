@@ -23,13 +23,13 @@ export function Footer() {
           alt="AB Power"
           className="h-14 w-auto object-contain sm:h-16"
         />
-        <nav className="grid w-full grid-cols-2 gap-x-6 gap-y-3 text-center text-sm text-mist sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
+        <nav className="grid w-full grid-cols-2 gap-2.5 text-center text-sm text-mist sm:flex sm:flex-wrap sm:justify-center sm:gap-3">
           {footerLinks.map((link) =>
             link.to.startsWith('#') ? (
               <a
                 key={link.to}
                 href={link.to}
-                className="transition-colors hover:text-white"
+                className="rounded-xl border border-white/5 bg-white/[0.03] px-3 py-2.5 transition-colors hover:text-white sm:border-0 sm:bg-transparent sm:px-0 sm:py-0"
               >
                 {link.label}
               </a>
@@ -37,7 +37,7 @@ export function Footer() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="transition-colors hover:text-white"
+                className="rounded-xl border border-white/5 bg-white/[0.03] px-3 py-2.5 transition-colors hover:text-white sm:border-0 sm:bg-transparent sm:px-0 sm:py-0"
               >
                 {link.label}
               </Link>
