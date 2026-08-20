@@ -160,7 +160,7 @@ export function Navbar() {
             <>
               <Link
                 to={dashboardTo}
-                className="relative hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/30 transition-transform hover:scale-105 lg:flex"
+                className="relative hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/30 transition-transform hover:scale-105 xl:flex"
               >
                 <span className="absolute -inset-px rounded-full bg-gradient-to-l from-violet to-purple opacity-40 blur-sm" aria-hidden="true" />
                 <GaugeIcon />
@@ -169,7 +169,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setLogoutOpen(true)}
-                className="hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-105 sm:flex"
+                className="hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-105 xl:flex"
               >
                 <LogoutIcon />
                 تسجيل الخروج
@@ -189,7 +189,7 @@ export function Navbar() {
             <Link
               to={dashboardTo}
               aria-label="حسابي"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-soft transition-colors hover:border-violet/40 hover:text-white lg:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-soft transition-colors hover:border-violet/40 hover:text-white xl:hidden"
             >
               <ProfileIcon />
             </Link>
@@ -199,7 +199,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? 'إغلاق القائمة' : 'فتح القائمة'}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-soft transition-colors hover:border-violet/40 hover:text-white lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-soft transition-colors hover:border-violet/40 hover:text-white xl:hidden"
           >
             {open ? <CloseIcon /> : <MenuIcon />}
           </button>
@@ -209,8 +209,8 @@ export function Navbar() {
       <div
         className={
           open
-            ? 'grid border-t border-white/5 bg-night/90 backdrop-blur-md transition-all duration-300 lg:hidden'
-            : 'grid grid-rows-[0fr] border-transparent bg-night/90 transition-all duration-300 lg:hidden'
+            ? 'grid border-t border-white/5 bg-night/90 backdrop-blur-md transition-all duration-300 xl:hidden'
+            : 'grid grid-rows-[0fr] border-transparent bg-night/90 transition-all duration-300 xl:hidden'
         }
       >
         <div className="overflow-hidden">
