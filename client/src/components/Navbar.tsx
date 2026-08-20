@@ -80,6 +80,24 @@ function LogoutIcon() {
   )
 }
 
+function ProfileIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  )
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [logoutOpen, setLogoutOpen] = useState(false)
@@ -167,6 +185,15 @@ export function Navbar() {
             </Link>
           )}
 
+          {user && (
+            <Link
+              to={dashboardTo}
+              aria-label="حسابي"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-soft transition-colors hover:border-violet/40 hover:text-white lg:hidden"
+            >
+              <ProfileIcon />
+            </Link>
+          )}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
