@@ -160,7 +160,7 @@ export function Navbar() {
             <>
               <Link
                 to={dashboardTo}
-                className="relative hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/30 transition-transform hover:scale-105 sm:flex"
+                className="relative hidden items-center gap-2 rounded-full bg-gradient-to-l from-violet to-purple px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet/30 transition-transform hover:scale-105 lg:flex"
               >
                 <span className="absolute -inset-px rounded-full bg-gradient-to-l from-violet to-purple opacity-40 blur-sm" aria-hidden="true" />
                 <GaugeIcon />
